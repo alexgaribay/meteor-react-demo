@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 react
+meteorhacks:npm
+cosmos:browserify
