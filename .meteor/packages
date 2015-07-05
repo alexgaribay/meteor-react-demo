@@ -10,3 +10,6 @@ insecure
 react
 meteorhacks:npm
 cosmos:browserify
+
+
+npm-container
