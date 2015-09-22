@@ -27,6 +27,7 @@ Items = React.createClass({
           <input type="text" ref="input"/>
           <button type="submit">Add Item</button>
         </form>
+        <ReactRouter.Link to="/">Take me back home</ReactRouter.Link>
       </div>
     );
   }

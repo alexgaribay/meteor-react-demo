@@ -1,7 +1,11 @@
-var {
+const {
   Router,
-  Route
+  Route,
+  IndexRoute,
+  history
 } = ReactRouter;
+
+const browserHistory = history.createHistory()
 
 
 Routes = React.createClass({
@@ -10,8 +14,9 @@ Routes = React.createClass({
   },
   render: function () {
     return (
-      <Router history={ReactRouter.lib.BrowserHistory.history}>
-        <Route component={App}>
+      <Router history={browserHistory}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Index}/>
           <Route path="items" component={Items}/>
         </Route>
       </Router>
