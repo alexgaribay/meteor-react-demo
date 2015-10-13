@@ -5,19 +5,23 @@ const {
   history
 } = ReactRouter;
 
-const browserHistory = history.createHistory()
-
+const browserHistory = history.createHistory();
 
 Routes = React.createClass({
   getInitialState: function() {
     return {};
   },
-  render: function () {
+  render: function() {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute component={Index}/>
           <Route path="items" component={Items}/>
+          <Route path="signin" component={SignIn}/>
+        </Route>
+        <Route path="/app" component={AuthenticatedApp}>
+          <IndexRoute component={AuthenticatedAppIndex}/>
+          {/* Additional routes requiring authentication go here */}
         </Route>
       </Router>
     );

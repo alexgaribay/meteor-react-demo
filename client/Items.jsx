@@ -15,19 +15,22 @@ Items = React.createClass({
     ItemsCollection.insert({'content': item});
     React.findDOMNode(this.refs.input).value = "";
   },
-  render: function () {
+  render: function() {
     return (
-      <div>
+      <div className="row">
         <ul>
           {this.data.items.map(function (item) {
             return <li key={item._id}>{item.content}</li>;
           })}
         </ul>
-        <form onSubmit={this.addItem}>
-          <input type="text" ref="input"/>
-          <button type="submit">Add Item</button>
-        </form>
-        <ReactRouter.Link to="/">Take me back home</ReactRouter.Link>
+        <div className="col-xs-8 col-sm-6 col-md-4">
+          <form onSubmit={this.addItem}>
+            <div className="form-group">
+              <input type="text" className="form-control" placeholder="Item" ref="input"/>
+            </div>
+            <button className="btn btn-primary" type="submit">Add Item</button>
+          </form>
+        </div>
       </div>
     );
   }

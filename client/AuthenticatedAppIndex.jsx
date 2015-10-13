@@ -1,4 +1,4 @@
-Index = React.createClass({
+AuthenticatedAppIndex = React.createClass({
   getInitialState: function() {
     return {};
   },
@@ -6,7 +6,7 @@ Index = React.createClass({
     return (
       <div className="row">
         <div className="col-xs-12">
-          <p>This is the index route.</p>
+          <p>This is the index page for the authenticated app.</p>
         </div>
       </div>
     );
