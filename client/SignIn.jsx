@@ -20,6 +20,10 @@ SignIn = React.createClass({
       // Do something with the error in production
     }
   },
+  componentWillMount() {
+    // Update the page's title
+    document.title = "Sign In";
+  },
   render() {
     return (
       <div className="row">

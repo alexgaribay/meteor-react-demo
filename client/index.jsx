@@ -1,4 +1,8 @@
 Index = React.createClass({
+  componentWillMount() {
+    // Update the page's title
+    document.title = "Meteor And React Demo";
+  },
   render() {
     return (
       <div className="row">

@@ -5,6 +5,10 @@ Items = React.createClass({
       items: ItemsCollection.find({}).fetch()
     };
   },
+  componentWillMount() {
+    // Update the page's title
+    document.title = "Items";
+  },
   addItem(e) {
     e.preventDefault();
     var item = this.refs.input.value;
