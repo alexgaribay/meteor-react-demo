@@ -1,3 +1,3 @@
-$(document).ready(function() {
-  React.render(<Routes/>, document.body);
+$(document).ready(() => {
+  ReactDOM.render(<Routes/>, document.getElementById("app"));
 });

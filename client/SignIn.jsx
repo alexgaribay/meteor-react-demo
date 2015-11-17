@@ -9,8 +9,8 @@ SignIn = React.createClass({
   },
   onFormSubmit: function(e) {
     e.preventDefault();
-    let username = React.findDOMNode(this.refs.username).value.trim();
-    let password = React.findDOMNode(this.refs.password).value.trim();
+    let username = this.refs.username.value.trim();
+    let password = this.refs.password.value.trim();
 
     Meteor.loginWithPassword({username: username}, password, this.signInCallback);
   },

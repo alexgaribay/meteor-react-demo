@@ -10,10 +10,10 @@ Items = React.createClass({
   },
   addItem: function(e) {
     e.preventDefault();
-    var item = React.findDOMNode(this.refs.input).value;
+    var item = this.refs.input.value;
 
     ItemsCollection.insert({'content': item});
-    React.findDOMNode(this.refs.input).value = "";
+    this.refs.input.value = "";
   },
   render: function() {
     return (
