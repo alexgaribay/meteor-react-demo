@@ -1,25 +1,22 @@
 Items = React.createClass({
   mixins: [ReactMeteorData],
-  getMeteorData: function() {
+  getMeteorData() {
     return {
       items: ItemsCollection.find({}).fetch()
     };
   },
-  getInitialState: function() {
-    return {};
-  },
-  addItem: function(e) {
+  addItem(e) {
     e.preventDefault();
     var item = this.refs.input.value;
 
     ItemsCollection.insert({'content': item});
     this.refs.input.value = "";
   },
-  render: function() {
+  render() {
     return (
       <div className="row">
         <ul>
-          {this.data.items.map(function (item) {
+          {this.data.items.map((item) => {
             return <li key={item._id}>{item.content}</li>;
           })}
         </ul>

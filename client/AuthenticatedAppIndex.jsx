@@ -1,8 +1,5 @@
 AuthenticatedAppIndex = React.createClass({
-  getInitialState: function() {
-    return {};
-  },
-  render: function() {
+  render() {
     return (
       <div className="row">
         <div className="col-xs-12">

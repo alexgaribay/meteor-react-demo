@@ -5,10 +5,7 @@ const {
 
 // Navigation bar for the public app
 AppNavBar = React.createClass({
-  getInitialState: function () {
-    return {};
-  },
-  render: function() {
+  render() {
     return (
       <NavBar brandRoute="/">
         <ul className="nav navbar-nav">
@@ -26,10 +23,7 @@ AppNavBar = React.createClass({
 
 // Navigation bar the authentication-protected app
 AuthenticatedAppNavBar = React.createClass({
-  getInitialState: function () {
-    return {};
-  },
-  render: function () {
+  render() {
     return (
       <NavBar brandRoute="/app">
         <ul className="nav navbar-nav">
@@ -45,10 +39,7 @@ AuthenticatedAppNavBar = React.createClass({
 
 // A reusable component for creating navigation bars
 var NavBar = React.createClass({
-  getInitialState: function() {
-    return {};
-  },
-  render: function() {
+  render() {
     return (
       <nav className="navbar navbar-default">
         <div className="container-fluid">
@@ -73,10 +64,7 @@ var NavBar = React.createClass({
 
 var NavLink = React.createClass({
   mixins: [History],
-  getInitialState: function() {
-    return {};
-  },
-  render: function() {
+  render() {
     let isIndex = this.props.index !== undefined;
     let isActive = this.history.isActive(this.props.to, this.props.query, isIndex);
     let className = isActive ? 'active' : '';

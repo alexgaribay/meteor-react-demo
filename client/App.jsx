@@ -1,9 +1,6 @@
 // A container component for basic views to be rendered in
 App = React.createClass({
-  getInitialState: function() {
-    return {};
-  },
-  render: function() {
+  render() {
     return (
       <div>
         <AppNavBar/>

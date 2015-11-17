@@ -8,10 +8,7 @@ const {
 const browserHistory = history.createHistory();
 
 Routes = React.createClass({
-  getInitialState: function() {
-    return {};
-  },
-  render: function() {
+  render() {
     return (
       <Router history={browserHistory}>
         <Route path="/" component={App}>

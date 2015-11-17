@@ -4,17 +4,14 @@ const {
 
 SignIn = React.createClass({
   mixins: [History],
-  getInitialState: function () {
-    return {};
-  },
-  onFormSubmit: function(e) {
+  onFormSubmit(e) {
     e.preventDefault();
     let username = this.refs.username.value.trim();
     let password = this.refs.password.value.trim();
 
     Meteor.loginWithPassword({username: username}, password, this.signInCallback);
   },
-  signInCallback: function(error) {
+  signInCallback(error) {
     if (error === undefined) {
       // Navigate to the protected app since the sign in was successful
       this.history.pushState(null, "/app");
@@ -23,7 +20,7 @@ SignIn = React.createClass({
       // Do something with the error in production
     }
   },
-  render: function() {
+  render() {
     return (
       <div className="row">
         <div className="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
