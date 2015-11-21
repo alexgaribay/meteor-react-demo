@@ -1,6 +1,7 @@
 Items = React.createClass({
   mixins: [ReactMeteorData],
   getMeteorData() {
+    Meteor.subscribe('items');
     return {
       items: ItemsCollection.find({}).fetch()
     };
@@ -9,11 +10,11 @@ Items = React.createClass({
     // Update the page's title
     document.title = "Items";
   },
+
   addItem(e) {
     e.preventDefault();
     var item = this.refs.input.value;
-
-    ItemsCollection.insert({'content': item});
+    Meteor.call("addItem", item)
     this.refs.input.value = "";
   },
   render() {
@@ -43,8 +44,8 @@ Items = React.createClass({
                   <div className="item">
                     <img className="ui avatar image" src="http://semantic-ui.com/images/avatar2/small/matthew.png" />
                     <div className="content">
-                      <a className="header">Name</a>
-                      <div className="description" key={item._id}>{item.content}.</div>
+                      <a className="header">Guest</a>
+                      <div className="description" key={item._id}>{item.content}</div>
                     </div>
                   </div>
                 )

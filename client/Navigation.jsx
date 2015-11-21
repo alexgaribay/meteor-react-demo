@@ -24,8 +24,8 @@ AuthenticatedAppNavBar = React.createClass({
   render() {
     return (
       <NavBar brandRoute="/app">
-        <div className="right menu">
-          <NavLink to="/app" index>Private</NavLink>
+        <NavLink to="/app" index>Private</NavLink>
+        <div className="right menu">  
           <a className="item" onClick={this.props.signOut}>Sign Out</a>
         </div>
       </NavBar>
