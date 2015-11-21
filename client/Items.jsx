@@ -39,7 +39,15 @@ Items = React.createClass({
           <div className="ui eleven wide column">
             <div className="ui list">
               {this.data.items.map((item) => {
-                return <div className="item" key={item._id}>{item.content}</div>;
+                return (
+                  <div className="item">
+                    <img className="ui avatar image" src="http://semantic-ui.com/images/avatar2/small/matthew.png" />
+                    <div className="content">
+                      <a className="header">Name</a>
+                      <div className="description" key={item._id}>{item.content}.</div>
+                    </div>
+                  </div>
+                )
               })}
             </div>
           </div>
