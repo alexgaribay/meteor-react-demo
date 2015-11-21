@@ -18,19 +18,19 @@ Items = React.createClass({
   },
   render() {
     return (
-      <div className="row">
-        <ul>
-          {this.data.items.map((item) => {
-            return <li key={item._id}>{item.content}</li>;
-          })}
-        </ul>
-        <div className="col-xs-8 col-sm-6 col-md-4">
+      <div className="ui grid">
+        <div className="ui column">
           <form onSubmit={this.addItem}>
-            <div className="form-group">
-              <input type="text" className="form-control" placeholder="Item" ref="input"/>
+            <div className="ui action fluid input">
+              <input type="text" placeholder="Item" ref="input"/>
+              <button className="ui button" type="submit">Add Item</button>
             </div>
-            <button className="btn btn-primary" type="submit">Add Item</button>
           </form>
+          <div className="ui list">
+            {this.data.items.map((item) => {
+              return <div className="item" key={item._id}>{item.content}</div>;
+            })}
+          </div>
         </div>
       </div>
     );

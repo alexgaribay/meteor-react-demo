@@ -23,3 +23,5 @@ check
 twbs:bootstrap
 accounts-password
 static-html                 # Render HTML for React bootstrapping
+semantic:ui
+flemay:less-autoprefixer

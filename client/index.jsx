@@ -1,7 +1,7 @@
 Index = React.createClass({
   componentWillMount() {
     // Update the page's title
-    document.title = "Meteor And React Demo";
+    document.title = "SemanticBase | A meteor react boilerplate with Semantic UI";
   },
   render() {
     return (
