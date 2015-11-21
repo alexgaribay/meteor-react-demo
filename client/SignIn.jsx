@@ -31,7 +31,7 @@ SignIn = React.createClass({
           <form onSubmit={this.onFormSubmit} className="ui form">
             <div className="field">
               <label htmlFor="username">Username</label>
-              <input type="text" id="username" placeholder="Username" ref="username" value="demo" readOnly/>
+              <input type="text" id="username" placeholder="Username" ref="username" value="Guest" readOnly/>
             </div>
             <div className="field">
               <label htmlFor="password">Password</label>

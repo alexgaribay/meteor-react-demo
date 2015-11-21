@@ -21,11 +21,19 @@ AppNavBar = React.createClass({
 
 // Navigation bar the authentication-protected app
 AuthenticatedAppNavBar = React.createClass({
+  mixins: [ReactMeteorData],
+  getMeteorData() {
+    Meteor.subscribe('users');
+    return {
+      currentUser: Meteor.user()
+    };
+  },
   render() {
     return (
       <NavBar brandRoute="/app">
         <NavLink to="/app" index>Private</NavLink>
-        <div className="right menu">  
+        <div className="right menu">
+          <div className="item">{this.data.currentUser.username}</div>
           <a className="item" onClick={this.props.signOut}>Sign Out</a>
         </div>
       </NavBar>
