@@ -45,7 +45,7 @@ AuthenticatedAppNavBar = React.createClass({
 var NavBar = React.createClass({
   render() {
     return (
-      <nav className="ui secondary pointing menu">
+      <nav className="ui secondary pointing bottom fixed menu">
         <Link className="header item" to={this.props.brandRoute}>SemanticBase</Link>
         {/* Components of the navigation bar will be rendered here */}
         {this.props.children}
