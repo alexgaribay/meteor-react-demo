@@ -26,18 +26,18 @@ SignIn = React.createClass({
   },
   render() {
     return (
-      <div className="row">
-        <div className="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-          <form onSubmit={this.onFormSubmit}>
-            <div className="form-group">
+      <div className="ui one column stackable center aligned page grid">
+        <div className="column eight wide">
+          <form onSubmit={this.onFormSubmit} className="ui form">
+            <div className="field">
               <label htmlFor="username">Username</label>
-              <input type="text" className="form-control" id="username" placeholder="Username" ref="username" value="demo" readOnly/>
+              <input type="text" id="username" placeholder="Username" ref="username" value="demo" readOnly/>
             </div>
-            <div className="form-group">
+            <div className="field">
               <label htmlFor="password">Password</label>
-              <input type="password" className="form-control" id="password" placeholder="Password" ref="password" value="password" readOnly/>
+              <input type="password" id="password" placeholder="Password" ref="password" value="password" readOnly/>
             </div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <button type="submit" className="ui fluid blue button">Sign In</button>
           </form>
         </div>
       </div>
