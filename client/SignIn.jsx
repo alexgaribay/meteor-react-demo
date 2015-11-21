@@ -26,20 +26,30 @@ SignIn = React.createClass({
   },
   render() {
     return (
-      <div className="ui one column stackable center aligned page grid">
-        <div className="column eight wide">
-          <form onSubmit={this.onFormSubmit} className="ui form">
-            <div className="field">
-              <label htmlFor="username">Username</label>
+      <div className="ui">
+        <h2 className="ui header">
+          <i className="privacy icon"></i>
+          <div className="content">
+            Sign In
+            <div className="sub header">Log in with our Guest useraccount</div>
+          </div>
+        </h2>
+        <div className="ui divider"></div>
+        <form onSubmit={this.onFormSubmit} className="ui form">
+          <div className="field">
+            <label htmlFor="username">Username</label>
+            <div className="ui massive transparent input" >
               <input type="text" id="username" placeholder="Username" ref="username" value="Guest" readOnly/>
             </div>
-            <div className="field">
-              <label htmlFor="password">Password</label>
+          </div>
+          <div className="field">
+            <label htmlFor="password">Password</label>
+            <div className="ui massive transparent input" >
               <input type="password" id="password" placeholder="Password" ref="password" value="password" readOnly/>
             </div>
-            <button type="submit" className="ui fluid blue button">Sign In</button>
-          </form>
-        </div>
+          </div>
+          <button type="submit" className="ui fluid green button">Sign In</button>
+        </form>
       </div>
     );
   }
