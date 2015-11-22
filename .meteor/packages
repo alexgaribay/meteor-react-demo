@@ -4,8 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-autopublish
-insecure
 react
 reactrouter:react-router
 standard-minifiers
@@ -20,6 +18,9 @@ reload
 random
 ejson
 check
-twbs:bootstrap
 accounts-password
 static-html                 # Render HTML for React bootstrapping
+semantic:ui
+flemay:less-autoprefixer
+meteorhacks:fast-render
+mquandalle:stylus

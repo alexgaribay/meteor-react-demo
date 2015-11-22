@@ -5,11 +5,17 @@ AuthenticatedAppIndex = React.createClass({
   },
   render() {
     return (
-      <div className="row">
-        <div className="col-xs-12">
-          <p>This is the index page for the authenticated app.</p>
-        </div>
+      <div className="ui">
+        <h2 className="ui header">
+          <i className="lock icon"></i>
+          <div className="content">
+            Private Area
+            <div className="sub header">Dashboard & Settings</div>
+          </div>
+        </h2>
+        <div className="ui divider"></div>
       </div>
+
     );
   }
 });

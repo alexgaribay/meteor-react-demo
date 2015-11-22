@@ -3,11 +3,12 @@ App = React.createClass({
   render() {
     return (
       <div>
-        <AppNavBar/>
-        <div className="container">
+
+        <div className="ui fluid main container">
           {/* Views will be rendered here */}
           {this.props.children}
         </div>
+        <AppNavBar/>
       </div>
     );
   }

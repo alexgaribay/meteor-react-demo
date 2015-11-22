@@ -41,7 +41,7 @@ AuthenticatedApp = React.createClass({
     return (
       <div>
         <AuthenticatedAppNavBar signOut={this.signOut}/>
-        <div className="container">
+        <div className="ui main fluid container">
           {/* Views will be rendered here */}
           {this.props.children}
         </div>
